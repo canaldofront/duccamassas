@@ -1,0 +1,22 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.cardapio-wrapper {
+  background-color: $background;
+  margin-bottom: $marginBottom;
+  padding: 6rem 0;
+
+  @include devices(mobile) {
+    margin-bottom: $marginBottomMobile;
+  }
+
+  .cardapio {
+    @include max-width;
+
+    .items {
+      display: grid;
+      gap: 8rem;
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+  }
+}

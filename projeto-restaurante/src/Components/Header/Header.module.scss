@@ -1,0 +1,39 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.header {
+  min-height: 59rem;
+  background: linear-gradient($gradient1, $gradient2);
+  position: relative;
+  margin-bottom: $marginBottom;
+
+  @include devices(mobile) {
+    margin-bottom: $marginBottomMobile;
+  }
+
+  .content {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 70rem;
+    padding: 0 1rem;
+    text-align: center;
+    color: $white;
+
+    h1 {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .image {
+    position: absolute;
+    bottom: -10rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 58rem;
+    height: 28rem;
+  }
+}

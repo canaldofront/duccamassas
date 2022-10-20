@@ -1,0 +1,29 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.benefits {
+  @include max-width;
+  margin-bottom: $marginBottom;
+
+  @include devices(mobile) {
+    margin-bottom: $marginBottomMobile;
+  }
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: center;
+  }
+
+  .top,
+  .bottom {
+    @include devices(tablet) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

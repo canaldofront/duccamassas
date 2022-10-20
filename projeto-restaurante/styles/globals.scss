@@ -1,0 +1,93 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+  @include devices(notebook) {
+    font-size: 60%;
+  }
+
+  @include devices(tablet) {
+    font-size: 58%;
+  }
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: $fontFamily;
+}
+
+h1,
+.h1 {
+  font-size: 4.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  @include devices(notebook) {
+    font-size: 4.2rem;
+  }
+
+  @include devices(mobile) {
+    font-size: 3.6rem;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 3.6rem;
+  font-weight: 600;
+
+  &.gold {
+    text-align: center;
+    text-transform: uppercase;
+    color: $gold;
+    margin-bottom: 6rem;
+    font-size: 3.2rem;
+  }
+
+  @include devices(mobile) {
+    font-size: 3.2rem;
+  }
+}
+
+p,
+.p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 3rem;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  display: inline-block;
+
+  &.btn-primary {
+    background-color: $button;
+    color: $white;
+
+    &:hover {
+      background-color: lighten($button, 3);
+    }
+  }
+}
+
+.icon {
+  width: 2.6rem;
+  height: 2.6rem;
+
+  &:hover {
+    color: $gradient2;
+  }
+}

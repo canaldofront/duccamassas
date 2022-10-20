@@ -1,0 +1,28 @@
+@import '../../../styles/mixins.scss';
+
+.benefit {
+  display: flex;
+  align-items: center;
+
+  .content {
+    margin-left: 2rem;
+
+    h2 {
+      font-size: 1.6rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      margin-bottom: 0.7rem;
+    }
+
+    h3 {
+      font-size: 1.6rem;
+      font-weight: 400;
+    }
+  }
+
+  @include devices(tablet) {
+    &:last-of-type {
+      margin-top: 6rem;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.footer {
+  @include max-width;
+  padding: 6rem 1rem 3rem 1rem;
+
+  h2 {
+    font-weight: 500;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: $gradient2;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  h3,
+  li,
+  li > a,
+  p {
+    font-weight: 400;
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: $lightBlack;
+  }
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+
+    @include devices(tablet) {
+      flex-direction: column;
+      gap: 6rem;
+    }
+
+    .main {
+      h3 {
+        margin: 1.5rem 0;
+        max-width: 27rem;
+      }
+
+      ul > li {
+        display: inline-block;
+        margin-right: 1rem;
+
+        a {
+          padding: 0.5rem;
+          display: flex;
+        }
+      }
+    }
+
+    .links {
+      ul {
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-comuns: 2;
+      }
+
+      ul > li > a:hover {
+        color: $gradient2;
+      }
+    }
+
+    .links,
+    .contato {
+      h2 {
+        margin-bottom: 3rem;
+      }
+
+      ul > li:not(:last-of-type) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  .bottom {
+    p {
+      text-align: center;
+    }
+  }
+}

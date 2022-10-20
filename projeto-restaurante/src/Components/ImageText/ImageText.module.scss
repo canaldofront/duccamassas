@@ -1,0 +1,54 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.section {
+  @include max-width;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  margin-bottom: $marginBottom;
+  scroll-margin-top: 15rem;
+
+  @include devices(tablet) {
+    flex-direction: column;
+  }
+
+  @include devices(mobile) {
+    margin-bottom: $marginBottomMobile;
+  }
+
+  .image,
+  .content {
+    width: 100%;
+    max-width: 58rem;
+  }
+
+  .image {
+    position: relative;
+    height: 44rem;
+
+    @include devices(tablet) {
+      margin-bottom: 4rem;
+    }
+
+    @include devices(mobile) {
+      height: 30rem;
+    }
+  }
+
+  .content {
+    span {
+      text-transform: uppercase;
+      font-size: 2rem;
+      letter-spacing: 10%;
+      margin-bottom: 1rem;
+      color: $gradient2;
+    }
+
+    h2,
+    p {
+      margin-bottom: 2rem;
+    }
+  }
+}
